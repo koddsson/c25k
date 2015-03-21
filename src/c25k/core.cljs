@@ -1,10 +1,8 @@
 (ns c25k.core
-  (:require-macros [cljs.core.async.macros :refer [go]]
-                   [lucuma :refer [defwebcomponent]])
+  (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [goog.dom :as dom]
             [goog.events :as events]
             [cljs.core.async :refer [put! chan <! >! timeout ]]
-            [lucuma :refer [register]]
             [alandipert.storage-atom :refer [local-storage]]))
 
 ; c25k webapp.
