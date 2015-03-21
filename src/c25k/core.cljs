@@ -73,7 +73,7 @@
             (println "Read: " v))))
     (go (loop [acc 0 [curr & rest] plan]
           (when (not (nil? curr))
-            (let [time (* 10 (:time curr))]
+            (let [time (* 1000 (:time curr))]
               (>! c (:type curr))
               (<! (timeout (+ acc time)))
               (recur (+ acc time) rest)))))))
